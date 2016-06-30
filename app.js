@@ -10,7 +10,7 @@ app.get('/', function (request, response) {
 app.get('/process_get', function (request, response) {
     var total = 0;
     // TODO: Add code here.
-    response.end(total);
+    response.end(String(total));
 });
 
 app.listen(PORT, function () {
