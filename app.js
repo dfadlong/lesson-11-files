@@ -1,16 +1,11 @@
 var express = require('express');
 var app = express();
+const PORT = 8081;
 
-const PORT = 8080;
+app.set('view engine', 'ejs');
 
 app.get('/', function (request, response) {
-    response.sendFile(__dirname + '/html/form.html');
-});
-
-app.get('/process_get', function (request, response) {
-    var total = 0;
-    // TODO: Add code here.
-    response.end(String(total));
+	response.render('pages/index');
 });
 
 app.listen(PORT, function () {
